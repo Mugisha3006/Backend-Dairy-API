@@ -12,3 +12,74 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id       String @id @default(uuid())
+  name     String
+  email    String @unique
+  password String
+  role     Role   @default(SUBSCRIBER)
+}
+
+model Product {
+  id          String      @id @default(uuid())
+  name        String
+  description String
+  price       Int
+  quantity    Int
+  images      Image[]
+  Category    Category?   @relation(fields: [categoryId], references: [id])
+  categoryId  String?
+  OrderItem   OrderItem[]
+  CartItem    CartItem[]
+}
+
+model Category {
+  id          String    @id @default(uuid())
+  name        String
+  description String
+  products    Product[]
+}
+
+model OrderItem {
+  id        String  @id @default(uuid())
+  quantity  Int
+  price     Int
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+  Order     Order?  @relation(fields: [orderId], references: [id])
+  orderId   String?
+}
+
+model Order {
+  id         String      @id @default(uuid())
+  orderItems OrderItem[]
+}
+
+model Cart {
+  id        String     @id @default(uuid())
+  cartItems CartItem[]
+}
+
+model CartItem {
+  id        String  @id @default(uuid())
+  quantity  Int
+  price     Int
+  product   Product @relation(fields: [productId], references: [id])
+  cart      Cart    @relation(fields: [cartId], references: [id])
+  productId String
+  cartId    String
+}
+
+model Image {
+  id        String  @id @default(uuid())
+  url       String
+  product   Product @relation(fields: [productId], references: [id])
+  productId String
+}
+
+enum Role {
+  SUBSCRIBER
+  EDITOR
+  SUPER_ADMIN
+}
