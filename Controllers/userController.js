@@ -4,6 +4,19 @@ import bcrypt from 'bcrypt';
 
 const prisma = new PrismaClient();
 
+// get all users
+const getAllUsers = async (req, res) => {
+    try {
+        const allUsers = await prisma.user.findMany();
+
+        res.status(StatusCodes.OK).json({
+            users: allUsers
+        });
+    } catch (err) {
+        res.json({message:"Can't get all users!",err})
+    }
+}
+
 // create a new user
 const createUser = async (req, res) => {
     try {
@@ -42,4 +55,4 @@ const createUser = async (req, res) => {
     }
 };
 
-export { createUser}
+export { createUser, getAllUsers }
