@@ -13,7 +13,32 @@ const getAllUsers = async (req, res) => {
             users: allUsers
         });
     } catch (err) {
-        res.json({message:"Can't get all users!",err})
+        res.json({ message: "Can't get all users!", err })
+    }
+};
+
+// get user by id
+const getUserById = async (req, res) => {
+    try {
+        const id = +req.params.id;
+
+        const user = await prisma.user.findUnique({
+            where: {
+                id: id,
+            },
+        });
+        if (user) {
+            res.status(StatusCodes.OK).json({
+                message: "User got Successfully",
+                user: user,
+            });
+        } else {
+            res.status(StatusCodes.NOT_FOUND).json({
+                message: "User id doesn't exist"
+            })
+        };
+    } catch (err) {
+        res.status(StatusCodes.BAD_REQUEST).json({ message: "id doesn't exist", err });
     }
 }
 
@@ -55,4 +80,4 @@ const createUser = async (req, res) => {
     }
 };
 
-export { createUser, getAllUsers }
+export { createUser, getAllUsers, getUserById }
