@@ -13,14 +13,14 @@ const getAllUsers = async (req, res) => {
             users: allUsers
         });
     } catch (err) {
-        res.json({ message: "Can't get all users!", err })
+        res.status(StatusCodes.NOT_FOUND).json({ message: "Can't get users!", err })
     }
 };
 
 // get user by id
 const getUserById = async (req, res) => {
     try {
-        const id = +req.params.id;
+        const id = req.params.id;
 
         const user = await prisma.user.findUnique({
             where: {
