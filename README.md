@@ -1,2 +1,38 @@
 # Backend-Dairy-API
-This is a simple Dairy API to showcase my javascript skills
+This is a simple RESTful API for managing a digital diary.
+
+**Features**
+
+
+**Technologies**
+- **Backend**: Node/ express.js
+- **Database**: PostgreSQL
+- **ORM**: Prisma
+- **Authentication**: JWT
+
+**API Endpoints**
+
+
+
+**Setup Instructions**
+
+**Installation**
+1. Clone the Repository
+```
+git clone https://github.com/Mugisha3006/Backend-Dairy-API.git
+
+cd Backend-Dairy-API
+```
+
+**Running the API**
+```
+npm start
+```
+
+**Running Test**
+
+**Migrations**
+```
+npx prisma migrate dev
+```
+
