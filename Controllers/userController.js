@@ -103,4 +103,25 @@ const updateUserById = async (req, res) => {
     }
 };
 
-export { createUser, getAllUsers, getUserById, updateUserById }
+// delete user by id
+const deleteUserById = async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleteUser = await prisma.user.delete({
+            where: {
+                id
+            }
+        });
+        res
+            .status(StatusCodes.OK)
+            .json({message:"User Successfully Deleted"})
+    } catch (err) {
+        if (err.code === 'P2025') {
+            res.status(StatusCodes.BAD_REQUEST).send('User not found!');  
+        } else {
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).send('Failed to delete User')
+        }
+    }
+}
+
+export { createUser, getAllUsers, getUserById, updateUserById, deleteUserById }
