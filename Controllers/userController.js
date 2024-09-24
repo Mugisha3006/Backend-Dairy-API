@@ -80,4 +80,27 @@ const createUser = async (req, res) => {
     }
 };
 
-export { createUser, getAllUsers, getUserById }
+// update the exisiting user by id
+const updateUserById = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const updatedUser = await prisma.user.update({
+            where: {
+                id
+            },
+            data: {
+                ...req.body
+            }
+        });
+        console.log(updatedUser)
+        res
+            .status(StatusCodes.CREATED)
+            .json({ message: "User updated", user: updatedUser })
+    } catch (err) {
+        res
+            .status(StatusCodes.BAD_REQUEST)
+            .json({ message: "User not updated", err })
+    }
+};
+
+export { createUser, getAllUsers, getUserById, updateUserById }
