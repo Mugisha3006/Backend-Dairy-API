@@ -65,4 +65,45 @@ const createProduct = async (req, res) => {
     }
 };
 
-export { createProduct, getAllProducts, getProductById }
+const updateProduct = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const { name, description, price, quantity } = req.body;
+        const updatedProduct = await prisma.product.update({
+            where: {
+                id
+            },
+            data: {
+                name,
+                description,
+                price,
+                quantity
+            }
+        });
+        res.status(StatusCodes.OK).json({
+            message: "Product updated successfully",
+            product: updatedProduct
+        });
+    } catch (err) {
+        res.status(StatusCodes.BAD_REQUEST).json({ message: "id doesn't exist", err });
+    }
+}
+
+const deleteProduct = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const product = await prisma.product.delete({
+            where: {
+                id
+            }
+        });
+        res.status(StatusCodes.OK).json({
+            message: "Product deleted successfully",
+            product: product
+        });
+    } catch (err) {
+        res.status(StatusCodes.BAD_REQUEST).json({ message: "id doesn't exist", err });
+    }
+}
+
+export { createProduct, getAllProducts, getProductById, deleteProduct, updateProduct }
