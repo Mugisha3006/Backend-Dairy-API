@@ -16,4 +16,12 @@ const isCustomer = (req, res, next) => {
 	}
 };
 
+const isVendor = (req, res, next) => {
+    if (req.tokenData.role === "VENDOR") {
+        next();
+    } else {
+        res.status(StatusCodes.FORBIDDEN).json({ error: "Access Denied" });
+    }
+};
+
 export { isAdmin, isCustomer };
