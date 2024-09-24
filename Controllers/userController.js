@@ -58,7 +58,8 @@ const createUser = async (req, res) => {
         }
 
         // hash the password
-        const hashedPassword = await bcrypt.hash(password, 10);
+        const salt = await bcrypt.genSalt();
+        const hashedPassword = await bcrypt.hash(password, salt);
 
         // create new user
         const newUser = await prisma.user.create({
@@ -117,15 +118,24 @@ const loginUser = async (req, res) => {
 const updateUserById = async (req, res) => {
     try {
         const id = req.params.id;
+
+        let hashedPassword
+
+        if (req.body.password) {
+            const salt = await bcrypt.genSalt();
+            return hashedPassword = await bcrypt.hash(req.body.password, salt);
+        }
+
         const updatedUser = await prisma.user.update({
             where: {
                 id
             },
             data: {
-                ...req.body
+                ...req.body,
+                password: hashedPassword
             }
         });
-        console.log(updatedUser)
+
         res
             .status(StatusCodes.CREATED)
             .json({ message: "User updated", user: updatedUser })
