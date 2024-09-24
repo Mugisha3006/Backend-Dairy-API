@@ -87,4 +87,25 @@ const updateProductById = async (req, res) => {
     }
 };
 
-export { createProduct, getAllProducts, getProductById, updateProductById }
+// delete product by id
+const deleteProductById = async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleteProduct = await prisma.product.delete({
+            where: {
+                id
+            }
+        });
+        res
+            .status(StatusCodes.OK)
+            .json({ message: "Product Successfully Deleted" })
+    } catch (err) {
+        if (err.code === 'P2025') {
+            res.status(StatusCodes.BAD_REQUEST).send("Product not Found");
+        } else {
+            res.status(StatusCodes.INTERNAL_SERVER_ERROR).send("Failed to delete Product")
+        }
+    }
+};
+
+export { createProduct, getAllProducts, getProductById, updateProductById, deleteProductById }
