@@ -3,6 +3,21 @@ import { StatusCodes } from 'http-status-codes';
 
 const prisma = new PrismaClient();
 
+// get all products
+const getAllProducts = async (req, res) => {
+    try {
+        const allProducts = await prisma.product.findMany();
+        res
+            .status(StatusCodes.OK)
+            .json({
+                products: allProducts
+            });
+    } catch (err) {
+        res
+            .json({ message: "Can't get Products", err });
+    }
+};
+
 // Create a new product 
 const createProduct = async (req, res) => {
     try {
@@ -25,4 +40,4 @@ const createProduct = async (req, res) => {
     }
 };
 
-export {createProduct}
+export { createProduct, getAllProducts }
