@@ -106,7 +106,6 @@ const deleteProduct = async (req, res) => {
     }
 }
 
-export { createProduct, getAllProducts, getProductById, deleteProduct, updateProduct }
 // update the existing product by id
 const updateProductById = async (req, res) => {
     try {
