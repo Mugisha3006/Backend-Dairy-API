@@ -18,6 +18,31 @@ const getAllProducts = async (req, res) => {
     }
 };
 
+// get product by id
+const getProductById = async (req, res) => {
+    try {
+        const id = req.params.id;
+
+        const product = await prisma.product.findUnique({
+            where: {
+                id: id
+            },
+        });
+        if (product) {
+            res.status(StatusCodes.OK).json({
+                message: "Product got successfully",
+                product: product
+            });
+        } else {
+            res.status(StatusCodes.NOT_FOUND).json({
+                message:"Product id doesn't exist"
+            })
+        };
+    } catch (err) {
+        res.status(StatusCodes.BAD_REQUEST).json({ message: "id doesn't exist", err });
+    };
+}
+
 // Create a new product 
 const createProduct = async (req, res) => {
     try {
@@ -40,4 +65,4 @@ const createProduct = async (req, res) => {
     }
 };
 
-export { createProduct, getAllProducts }
+export { createProduct, getAllProducts, getProductById }
