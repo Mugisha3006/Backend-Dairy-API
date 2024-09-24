@@ -3,7 +3,7 @@ import { StatusCodes } from "http-status-codes";
 import Jwt from "jsonwebtoken";
 
 const createJWTtoken = (data) => {
-    //Generate  token using crypto
+    //Generate secret using crypto and store in .env file
     return Jwt.sign(data, process.env.JWT_SECRET_ACCESS, { expiresIn: "48h"});
 }
 

@@ -18,31 +18,6 @@ const getAllUsers = async (req, res) => {
     }
 };
 
-// get user by id
-const getUserById = async (req, res) => {
-    try {
-        const id = req.params.id;
-
-        const user = await prisma.user.findUnique({
-            where: {
-                id: id,
-            },
-        });
-        if (user) {
-            res.status(StatusCodes.OK).json({
-                message: "User got Successfully",
-                user: user,
-            });
-        } else {
-            res.status(StatusCodes.NOT_FOUND).json({
-                message: "User id doesn't exist"
-            })
-        };
-    } catch (err) {
-        res.status(StatusCodes.BAD_REQUEST).json({ message: "id doesn't exist", err });
-    }
-}
-
 // create a new user
 const createUser = async (req, res) => {
     try {
@@ -167,4 +142,4 @@ const deleteUserById = async (req, res) => {
     }
 }
 
-export { createUser, getAllUsers, getUserById, updateUserById, deleteUserById, loginUser }
+export { createUser, getAllUsers, updateUserById, deleteUserById, loginUser }
