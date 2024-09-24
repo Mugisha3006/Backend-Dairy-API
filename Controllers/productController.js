@@ -65,4 +65,26 @@ const createProduct = async (req, res) => {
     }
 };
 
-export { createProduct, getAllProducts, getProductById }
+// update the existing product by id
+const updateProductById = async (req, res) => {
+    try {
+        const id = req.params.id;
+        const updatedProduct = await prisma.product.update({
+            where: {
+                id
+            },
+            data: {
+                ...req.body
+            }
+        });
+        res
+            .status(StatusCodes.CREATED)
+            .json({ message: "Product Updated", product: updatedProduct })
+    } catch (err) {
+        res
+            .status(StatusCodes.BAD_REQUEST)
+            .json({ message: "Product not Updated", err })
+    }
+};
+
+export { createProduct, getAllProducts, getProductById, updateProductById }
