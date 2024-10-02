@@ -5,8 +5,12 @@ import userRouter from './Routes/userRouter.js'
 import productRouter from './Routes/productRouter.js'
 import categoryRouter from './Routes/categoryRouter.js'
 import orderRouter from './Routes/orderRouter.js'
+import imageRouter from './Routes/imageRouter.js'
 
 const app = express();
+
+// middleware to serve images from a public directory
+app.use(express.static('public'));
 
 app.use(morgan('combined'));
 
@@ -22,5 +26,6 @@ app.use('/api/V1/users', userRouter)
 app.use('/api/V1/products', productRouter)
 app.use('/api/V1/categories', categoryRouter)
 app.use('/api/V1/orders', orderRouter)
+app.use('/api/V1/images', imageRouter )
 
 export default app;

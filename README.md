@@ -30,6 +30,9 @@ npm start
 ```
 
 **Running Test**
+```
+npm test
+```
 
 **Migrations**
 ```
