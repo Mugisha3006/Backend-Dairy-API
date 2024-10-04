@@ -35,7 +35,7 @@ const createCartItem = async (req, res) => {
     }
 };
 
-// remove cart/ delete cartItem
+// remove from cart/ delete cartItem
 const deleteCartItemById = async (req, res) => {
     try {
         const { id } = req.params;
