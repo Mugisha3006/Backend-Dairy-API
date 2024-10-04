@@ -7,6 +7,7 @@ import categoryRouter from './Routes/categoryRouter.js'
 import orderRouter from './Routes/orderRouter.js'
 import imageRouter from './Routes/imageRouter.js'
 import cartRouter from './Routes/cartRouter.js'
+import cartItemRouter from './Routes/cartItemRouter.js'
 
 const app = express();
 
@@ -29,5 +30,6 @@ app.use('/api/V1/categories', categoryRouter)
 app.use('/api/V1/orders', orderRouter)
 app.use('/api/V1/images', imageRouter)
 app.use('/api/V1/carts', cartRouter)
+app.use('/api/V1/cartItems', cartItemRouter)
 
 export default app;
