@@ -3,6 +3,22 @@ import { StatusCodes } from 'http-status-codes';
 
 const prisma = new PrismaClient();
 
+// get all cart items
+const getAllCartItems = async (req, res) => {
+    try {
+        const allCartItems = await prisma.cartItem.findMany();
+        res
+            .status(StatusCodes.OK)
+            .json({
+                cartItems: allCartItems
+            });
+    } catch (err) {
+        res.status(StatusCodes.BAD_REQUEST).json({
+            message: "Can't get CartItems", err
+        })
+    }
+};
+
 // Add to cart/ create a cartItem
 const createCartItem = async (req, res) => {
     try {
@@ -55,4 +71,4 @@ const deleteCartItemById = async (req, res) => {
     }
 };
 
-export {createCartItem, deleteCartItemById}
+export {getAllCartItems, createCartItem, deleteCartItemById}

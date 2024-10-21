@@ -1,7 +1,9 @@
 import { Router } from "express";
-import { createCartItem, deleteCartItemById } from '../Controllers/cartItemContoller.js';
+import { getAllCartItems, createCartItem, deleteCartItemById } from '../Controllers/cartItemContoller.js';
 
 const router = Router();
+
+router.get('/allCartItems', getAllCartItems)
 
 router.post('/create', createCartItem)
 
