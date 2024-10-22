@@ -6,7 +6,11 @@ const prisma = new PrismaClient();
 // get all products
 const getAllProducts = async (req, res) => {
     try {
-        const allProducts = await prisma.product.findMany();
+        const allProducts = await prisma.product.findMany({
+            include: {
+                images: true,
+            }
+        });
         res
             .status(StatusCodes.OK)
             .json({
