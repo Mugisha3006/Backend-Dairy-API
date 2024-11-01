@@ -21,12 +21,12 @@ const getAllUsers = async (req, res) => {
 // create a new user
 const createUser = async (req, res) => {
     try {
-        const { name, email, password, role } = req.body; 
+        const { name, email, password } = req.body; 
 
         // Check if all required fields are present
-        if (!name || !email || !password || !role) {
+        if (!name || !email || !password) {
             return res.status(StatusCodes.BAD_REQUEST).json({
-                message: "All fields (name, email, password, role) are required"
+                message: "All fields (name, email, password) are required"
             });
         }
 
@@ -51,7 +51,7 @@ const createUser = async (req, res) => {
                 name,
                 email,  
                 password: hashedPassword,
-                role
+                // role
             }
         });
 
