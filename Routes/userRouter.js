@@ -1,12 +1,13 @@
 import { Router } from 'express';
 import { createUser, getAllUsers, updateUserById, deleteUserById, loginUser } from '../Controllers/userController.js';
+import { userSchema, validate } from '../utils/data-validator.js';
 
 
 const router = Router();
 
 router.get('/', getAllUsers)
 
-router.post('/register', createUser)
+router.post('/register',validate(userSchema), createUser)
 
 router.post('/login', loginUser)
 
