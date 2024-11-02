@@ -1,0 +1,4001 @@
+{
+	"info": {
+		"_postman_id": "ab7b6e00-2966-4a0b-9886-aa13ef4ded6e",
+		"name": "Backend-Dairy-API",
+		"description": "This is a simple RESTful API for managing a digital diary platform selling dairy products like milk, yohghurt, ghee, and soured milk.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34984864"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"George Edwards\",\r\n    \"email\":\"george@gmail.com\",\r\n    \"password\":\"george123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/users/register"
+					},
+					"response": [
+						{
+							"name": "User with identical email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Mark Osuna\",\r\n    \"email\":\"mark@gmail.com\",\r\n    \"password\":\"osuna123\",\r\n    \"role\":\"SUBSCRIBER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-2bbUhG7YJXbRkDZULTaTru8KYUg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Sep 2024 08:52:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered Successfully\",\n    \"user\": {\n        \"id\": \"ba63c615-0dd3-46da-b44c-a677359317a3\",\n        \"email\": \"steven@gmail.com\",\n        \"name\": \"Steven Gerald\"\n    }\n}"
+						},
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Ashleen lyan\",\r\n    \"email\":\"ashleem@gmail.com\",\r\n    \"password\":\"ashleen123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-wE9xEymXYcTJ149Swfxl05o7u90\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 05:40:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered Successfully\",\n    \"user\": {\n        \"id\": \"12565662-4eb9-4475-b1f7-926b179cfc7e\",\n        \"email\": \"micheal@gmail.com\",\n        \"name\": \"Micheal Owen\"\n    }\n}"
+						},
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Ashleen lyan\",\r\n    \"email\":\"ashleem@gmail.com\",\r\n    \"password\":\"ashleen123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "145"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"91-STByFdX1syK5JKTERHuT+d+QPrA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 05:42:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered Successfully\",\n    \"user\": {\n        \"id\": \"95f4c30a-4b51-41f7-891d-54aee959fd29\",\n        \"email\": \"ashleem@gmail.com\",\n        \"name\": \"Ashleen lyan\"\n    }\n}"
+						},
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Natasha Keisha\",\r\n    \"email\":\"natasha@gmail.com\",\r\n    \"password\":\"natasha123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-+VNxvQtbLHlWtLtphQBpLw/CtKo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:43:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered Successfully\",\n    \"user\": {\n        \"id\": \"5f53624a-357b-4798-8e00-14c74da63665\",\n        \"email\": \"natasha@gmail.com\",\n        \"name\": \"Natasha Keisha\"\n    }\n}"
+						},
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Natasha Keisha\",\r\n    \"email\":\"natasha@gmail.com\",\r\n    \"password\":\"natasha123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-+VNxvQtbLHlWtLtphQBpLw/CtKo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:43:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered Successfully\",\n    \"user\": {\n        \"id\": \"5f53624a-357b-4798-8e00-14c74da63665\",\n        \"email\": \"natasha@gmail.com\",\n        \"name\": \"Natasha Keisha\"\n    }\n}"
+						},
+						{
+							"name": "Create User",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Natasha Keisha\",\r\n    \"email\":\"natasha@gmail.com\",\r\n    \"password\":\"natasha123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "147"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"93-+VNxvQtbLHlWtLtphQBpLw/CtKo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:43:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered Successfully\",\n    \"user\": {\n        \"id\": \"5f53624a-357b-4798-8e00-14c74da63665\",\n        \"email\": \"natasha@gmail.com\",\n        \"name\": \"Natasha Keisha\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "http://localhost:3300/api/V1/users/register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Mark Osuna\",\r\n    \"email\":\"mark@gmail.com\",\r\n    \"password\":\"osuna123\",\r\n    \"role\":\"SUBSCRIBER\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/users/register"
+					},
+					"response": [
+						{
+							"name": "http://localhost:3300/api/V1/users/register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Mark Osuna\",\r\n    \"email\":\"mark@gmail.com\",\r\n    \"password\":\"osuna123\",\r\n    \"role\":\"SUBSCRIBER\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/register"
+							},
+							"status": "Not Acceptable",
+							"code": 406,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-6b3ROKM/8enVfnoRHjTBQR0sc+0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Sep 2024 09:01:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User with email already exists\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyNTY1NjYyLTRlYjktNDQ3NS1iMWY3LTkyNmIxNzljZmM3ZSIsImVtYWlsIjoibWljaGVhbEBnbWFpbC5jb20iLCJuYW1lIjoiTWljaGVhbCBPd2VuIiwicm9sZSI6IlNVQlNDUklCRVIiLCJpYXQiOjE3MjcyNzE0ODgsImV4cCI6MTcyNzQ0NDI4OH0.q2FBLQVwCOh9j67dVuUrfMT_OLCbN5ECBUVJnubbzNs"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/users"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "326"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"146-hLLlDUDHQWzy7lcP/is+2wZnf5Q\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Sep 2024 11:24:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"id\": \"32a7bdfc-bca1-4c63-b47a-9753735e5357\",\n            \"name\": \"Mark Ssali\",\n            \"email\": \"mark@gmail.com\",\n            \"password\": \"\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"ba63c615-0dd3-46da-b44c-a677359317a3\",\n            \"name\": \"Steven Gerald\",\n            \"email\": \"steven@gmail.com\",\n            \"password\": \"$2b$10$GGGOHJ40l699EOGwV3JpX.NRDQdXJiP6uJydKhj3Ejltp3BbhQ46W\",\n            \"role\": \"SUBSCRIBER\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "841"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"349-gjnu0mfpdFekhR/8IrOBQebWusc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 06:30:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"id\": \"32a7bdfc-bca1-4c63-b47a-9753735e5357\",\n            \"name\": \"Mark Ssali\",\n            \"email\": \"mark@gmail.com\",\n            \"password\": \"\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"ba63c615-0dd3-46da-b44c-a677359317a3\",\n            \"name\": \"Steven Gerald\",\n            \"email\": \"steven@gmail.com\",\n            \"password\": \"$2b$10$GGGOHJ40l699EOGwV3JpX.NRDQdXJiP6uJydKhj3Ejltp3BbhQ46W\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"12565662-4eb9-4475-b1f7-926b179cfc7e\",\n            \"name\": \"Micheal Owen\",\n            \"email\": \"micheal@gmail.com\",\n            \"password\": \"$2b$10$f4bdJHSevx29yAvQxveme.rWcYKaBd3TRe5BVd4GMibVuHcSnyfPe\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"95f4c30a-4b51-41f7-891d-54aee959fd29\",\n            \"name\": \"Ashleen lyan\",\n            \"email\": \"ashleem@gmail.com\",\n            \"password\": \"$2b$10$706xCTw06qCd13JcNzG49OWfUQc9cWRwocxC8UQgL6t6N.4QHH.4u\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"87a59793-1597-4e89-8b3f-8ffc30a207f0\",\n            \"name\": \"Naomi Osaka\",\n            \"email\": \"naomi@gmail.com\",\n            \"password\": \"naomi123\",\n            \"role\": \"SUBSCRIBER\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get All Users",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "665"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"299-TQ9mp18A4yXDSSJaUR5hvvQ2XBw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:40:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"users\": [\n        {\n            \"id\": \"12565662-4eb9-4475-b1f7-926b179cfc7e\",\n            \"name\": \"Micheal Owen\",\n            \"email\": \"micheal@gmail.com\",\n            \"password\": \"$2b$10$f4bdJHSevx29yAvQxveme.rWcYKaBd3TRe5BVd4GMibVuHcSnyfPe\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"87a59793-1597-4e89-8b3f-8ffc30a207f0\",\n            \"name\": \"Naomi Osaka\",\n            \"email\": \"naomi@gmail.com\",\n            \"password\": \"naomi123\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"32a7bdfc-bca1-4c63-b47a-9753735e5357\",\n            \"name\": \"Mark Ssali\",\n            \"email\": \"mark@gmail.com\",\n            \"password\": \"mark123\",\n            \"role\": \"SUBSCRIBER\"\n        },\n        {\n            \"id\": \"95f4c30a-4b51-41f7-891d-54aee959fd29\",\n            \"name\": \"Ashleen Nuwembabazi\",\n            \"email\": \"ashleem@gmail.com\",\n            \"password\": \"$2b$10$706xCTw06qCd13JcNzG49OWfUQc9cWRwocxC8UQgL6t6N.4QHH.4u\",\n            \"role\": \"SUBSCRIBER\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/users/ba63c615-0dd3-46da-b44c-a677359317a3"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users/1"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-M8zZvIaQgJg+L6T2mqt1Lot2H0s\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 23 Sep 2024 11:46:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"id doesn't exist\",\n    \"err\": {\n        \"name\": \"PrismaClientValidationError\",\n        \"clientVersion\": \"5.19.1\"\n    }\n}"
+						},
+						{
+							"name": "Get User By ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users/ba63c615-0dd3-46da-b44c-a677359317a3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "232"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e8-WUo7/5j7C8fNzjcJHIDoluSid0E\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 05:36:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User got Successfully\",\n    \"user\": {\n        \"id\": \"ba63c615-0dd3-46da-b44c-a677359317a3\",\n        \"name\": \"Steven Gerald\",\n        \"email\": \"steven@gmail.com\",\n        \"password\": \"$2b$10$GGGOHJ40l699EOGwV3JpX.NRDQdXJiP6uJydKhj3Ejltp3BbhQ46W\",\n        \"role\": \"SUBSCRIBER\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": \"32a7bdfc-bca1-4c63-b47a-9753735e5357\",\r\n            \"name\": \"Mark Ssali\",\r\n            \"email\": \"mark@gmail.com\",\r\n            \"password\": \"mark123\",\r\n            \"role\": \"SUBSCRIBER\"\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/32a7bdfc-bca1-4c63-b47a-9753735e5357"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "165"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a5-JLZBQEQ0UuLFMiU6iIH4FFCeusA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 06:32:03 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated\",\n    \"user\": {\n        \"id\": \"32a7bdfc-bca1-4c63-b47a-9753735e5357\",\n        \"name\": \"Mark Ssali\",\n        \"email\": \"mark@gmail.com\",\n        \"password\": \"mark123\",\n        \"role\": \"SUBSCRIBER\"\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": \"95f4c30a-4b51-41f7-891d-54aee959fd29\",\r\n            \"name\": \"Ashleen Nuwembabazi\",\r\n            \"email\": \"ashleem@gmail.com\",\r\n            \"password\": \"$2b$10$706xCTw06qCd13JcNzG49OWfUQc9cWRwocxC8UQgL6t6N.4QHH.4u\",\r\n            \"role\": \"SUBSCRIBER\"\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/95f4c30a-4b51-41f7-891d-54aee959fd29"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "230"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e6-Qw19p7k8+pbxT/wXCwVVV0lq7rc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 06:34:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User updated\",\n    \"user\": {\n        \"id\": \"95f4c30a-4b51-41f7-891d-54aee959fd29\",\n        \"name\": \"Ashleen Nuwembabazi\",\n        \"email\": \"ashleem@gmail.com\",\n        \"password\": \"$2b$10$706xCTw06qCd13JcNzG49OWfUQc9cWRwocxC8UQgL6t6N.4QHH.4u\",\n        \"role\": \"SUBSCRIBER\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/users/ba63c615-0dd3-46da-b44c-a677359317a3"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users/ba63c615-0dd3-46da-b44c-a677359317a3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-S0R/2Og/qRtIchWkQahpC8lHPSA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 06:58:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Successfully Deleted\"\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/users/ba63c615-0dd3-46da-b44c-a677359317a3"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-S0R/2Og/qRtIchWkQahpC8lHPSA\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 06:58:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User Successfully Deleted\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"micheal@gmail.com\",\r\n    \"password\":\"micheal123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/users/login"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"micheal@gmail.com\",\r\n    \"password\":\"micheal123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "529"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"211-iei19Hm8vxZU//RhJN5DZ43RaCQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:38:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User logged in successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyNTY1NjYyLTRlYjktNDQ3NS1iMWY3LTkyNmIxNzljZmM3ZSIsImVtYWlsIjoibWljaGVhbEBnbWFpbC5jb20iLCJuYW1lIjoiTWljaGVhbCBPd2VuIiwicm9sZSI6IlNVQlNDUklCRVIiLCJpYXQiOjE3MjcyNzE0ODgsImV4cCI6MTcyNzQ0NDI4OH0.q2FBLQVwCOh9j67dVuUrfMT_OLCbN5ECBUVJnubbzNs\",\n    \"user\": {\n        \"id\": \"12565662-4eb9-4475-b1f7-926b179cfc7e\",\n        \"name\": \"Micheal Owen\",\n        \"email\": \"micheal@gmail.com\",\n        \"password\": \"$2b$10$f4bdJHSevx29yAvQxveme.rWcYKaBd3TRe5BVd4GMibVuHcSnyfPe\",\n        \"role\": \"SUBSCRIBER\"\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\":\"micheal@gmail.com\",\r\n    \"password\":\"micheal123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/users/login"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "529"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"211-iei19Hm8vxZU//RhJN5DZ43RaCQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:38:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User logged in successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyNTY1NjYyLTRlYjktNDQ3NS1iMWY3LTkyNmIxNzljZmM3ZSIsImVtYWlsIjoibWljaGVhbEBnbWFpbC5jb20iLCJuYW1lIjoiTWljaGVhbCBPd2VuIiwicm9sZSI6IlNVQlNDUklCRVIiLCJpYXQiOjE3MjcyNzE0ODgsImV4cCI6MTcyNzQ0NDI4OH0.q2FBLQVwCOh9j67dVuUrfMT_OLCbN5ECBUVJnubbzNs\",\n    \"user\": {\n        \"id\": \"12565662-4eb9-4475-b1f7-926b179cfc7e\",\n        \"name\": \"Micheal Owen\",\n        \"email\": \"micheal@gmail.com\",\n        \"password\": \"$2b$10$f4bdJHSevx29yAvQxveme.rWcYKaBd3TRe5BVd4GMibVuHcSnyfPe\",\n        \"role\": \"SUBSCRIBER\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This is specializes only the users endpoints"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\" Dairy Pure Milk\",\r\n    \"description\":\"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\r\n    \"price\": 18000,\r\n    \"quantity\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/products/create"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\" Dairy Pure Milk\",\r\n    \"description\":\"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\r\n    \"price\": 18000,\r\n    \"quantity\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-b8hLTH89DJgCSO5j1pc5zTMEIQk\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 09:29:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"product\": {\n        \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\n        \"name\": \" Dairy Pure Milk\",\n        \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\"\n    }\n}"
+						},
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Delightful Fruit Yogurt\",\r\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\r\n            \"price\": 50000,\r\n            \"quantity\": 5\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-FZkY6nnCrbGoJ6FMBJ6j26I+Zio\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 06:10:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"product\": {\n        \"id\": \"dddf4016-f98f-409b-b7de-b368226a5851\",\n        \"name\": \" Dairy Pure Milk\",\n        \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\"\n    }\n}"
+						},
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Delightful Fruit Yogurt\",\r\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\r\n            \"price\": 50000,\r\n            \"quantity\": 5\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "369"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"171-2YCqN5tVfTyGGVk3YxvCx/F7Fyc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 06:12:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"product\": {\n        \"id\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\",\n        \"name\": \"Delightful Fruit Yogurt\",\n        \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\"\n    }\n}"
+						},
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Well Cooked Ghee\",\r\n    \"description\": \"Ghee is typically prepared by simmering butter, which is churned from cream, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that has settled to the bottom. Spices can be added for flavor. The texture, color, and taste of ghee depend on the quality of the butter, the milk used in the process, and the duration of boiling time.\",\r\n    \"price\": 50000,\r\n    \"quantity\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "545"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"221-lkVoZqW/kTt/C5bMTMfN8oA7ASM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 06:14:54 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"product\": {\n        \"id\": \"89c09d74-fca7-424a-8397-2faf4c4d192e\",\n        \"name\": \"Well Cooked Ghee\",\n        \"description\": \"Ghee is typically prepared by simmering butter, which is churned from cream, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that has settled to the bottom. Spices can be added for flavor. The texture, color, and taste of ghee depend on the quality of the butter, the milk used in the process, and the duration of boiling time.\"\n    }\n}"
+						},
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Greek Yogurt\",\r\n            \"description\": \"Greek yogurt is a protein-rich dairy product that’s high in many nutrients like vitamin B12, calcium, and selenium. But, its nutritional value and health benefits can vary depending on the brand you choose.\",\r\n            \"price\": 50000,\r\n            \"quantity\": 5\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "345"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"159-TFMrxhurdQ/yuHEYAFA/yvWWYMY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 06:17:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"product\": {\n        \"id\": \"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\",\n        \"name\": \"Greek Yogurt\",\n        \"description\": \"Greek yogurt is a protein-rich dairy product that’s high in many nutrients like vitamin B12, calcium, and selenium. But, its nutritional value and health benefits can vary depending on the brand you choose.\"\n    }\n}"
+						},
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"name\": \"Classic Bongo\",\r\n            \"description\": \"Bongo or Soured milk denotes a range of food products produced by the acidification of milk. Acidification, which gives the milk a tart taste, is achieved either through bacterial fermentation or through the addition of an acid, such as lemon juice or vinegar. The acid causes milk to coagulate and thicken, inhibiting the growth of harmful bacteria and improving the product's shelf life.\",\r\n            \"price\": 20000,\r\n            \"quantity\": 5\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "527"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"20f-haCEYBHHT7F2VAVNOpIEhFBUXh4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 06:18:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product created successfully\",\n    \"product\": {\n        \"id\": \"04d44d29-d910-4acb-b76b-d3e489c0089c\",\n        \"name\": \"Classic Bongo\",\n        \"description\": \"Bongo or Soured milk denotes a range of food products produced by the acidification of milk. Acidification, which gives the milk a tart taste, is achieved either through bacterial fermentation or through the addition of an acid, such as lemon juice or vinegar. The acid causes milk to coagulate and thicken, inhibiting the growth of harmful bacteria and improving the product's shelf life.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/products"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2537"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9e9-8/ZwZx/NrJO1CeQoIf8wvYv7gPc\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 10:12:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        {\n            \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\n            \"name\": \" Dairy Pure Milk\",\n            \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n            \"price\": 18000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"32f57255-a528-4370-98e9-d3b954d6d731\",\n            \"name\": \"Delightful Fruit Yogurt\",\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"ccf9579c-65ee-437b-b2f7-ba20ae7389eb\",\n            \"name\": \"Delightful Fruit Yogurt\",\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"7ddc6292-9a9e-4995-a964-198ae4e52396\",\n            \"name\": \"Classic Bongo\",\n            \"description\": \"Bongo or Soured milk denotes a range of food products produced by the acidification of milk. Acidification, which gives the milk a tart taste, is achieved either through bacterial fermentation or through the addition of an acid, such as lemon juice or vinegar. The acid causes milk to coagulate and thicken, inhibiting the growth of harmful bacteria and improving the product's shelf life.\",\n            \"price\": 20000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"392c3c90-5556-46e3-9c7e-d4b12f761fc0\",\n            \"name\": \"Well Cooked Ghee\",\n            \"description\": \"Ghee is typically prepared by simmering butter, which is churned from cream, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that has settled to the bottom. Spices can be added for flavor. The texture, color, and taste of ghee depend on the quality of the butter, the milk used in the process, and the duration of boiling time.\",\n            \"price\": 50000,\n            \"quantity\": 1,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"f41a9a68-1d53-4b84-84a6-549a31d8f4af\",\n            \"name\": \"Greek Yogurt\",\n            \"description\": \"Greek yogurt is a protein-rich dairy product that’s high in many nutrients like vitamin B12, calcium, and selenium. But, its nutritional value and health benefits can vary depending on the brand you choose.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get all Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/allProducts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2174"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"87e-cMEzOYQhSvvziLyWX+v2ky7JbA8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:10:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        {\n            \"id\": \"32f57255-a528-4370-98e9-d3b954d6d731\",\n            \"name\": \"Delightful Fruit Yogurt\",\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"7ddc6292-9a9e-4995-a964-198ae4e52396\",\n            \"name\": \"Classic Bongo\",\n            \"description\": \"Bongo or Soured milk denotes a range of food products produced by the acidification of milk. Acidification, which gives the milk a tart taste, is achieved either through bacterial fermentation or through the addition of an acid, such as lemon juice or vinegar. The acid causes milk to coagulate and thicken, inhibiting the growth of harmful bacteria and improving the product's shelf life.\",\n            \"price\": 20000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"392c3c90-5556-46e3-9c7e-d4b12f761fc0\",\n            \"name\": \"Well Cooked Ghee\",\n            \"description\": \"Ghee is typically prepared by simmering butter, which is churned from cream, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that has settled to the bottom. Spices can be added for flavor. The texture, color, and taste of ghee depend on the quality of the butter, the milk used in the process, and the duration of boiling time.\",\n            \"price\": 50000,\n            \"quantity\": 1,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"f41a9a68-1d53-4b84-84a6-549a31d8f4af\",\n            \"name\": \"Greek Yogurt\",\n            \"description\": \"Greek yogurt is a protein-rich dairy product that’s high in many nutrients like vitamin B12, calcium, and selenium. But, its nutritional value and health benefits can vary depending on the brand you choose.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\n            \"name\": \"Pure Dairy Milk\",\n            \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n            \"price\": 18000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "Get all Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/allProducts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "2175"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"87f-9Mif3JGnfzmwOPmnozDDOp8YVQs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 06:19:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        {\n            \"id\": \"dddf4016-f98f-409b-b7de-b368226a5851\",\n            \"name\": \" Dairy Pure Milk\",\n            \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n            \"price\": 18000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\",\n            \"name\": \"Delightful Fruit Yogurt\",\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"89c09d74-fca7-424a-8397-2faf4c4d192e\",\n            \"name\": \"Well Cooked Ghee\",\n            \"description\": \"Ghee is typically prepared by simmering butter, which is churned from cream, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that has settled to the bottom. Spices can be added for flavor. The texture, color, and taste of ghee depend on the quality of the butter, the milk used in the process, and the duration of boiling time.\",\n            \"price\": 50000,\n            \"quantity\": 1,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\",\n            \"name\": \"Greek Yogurt\",\n            \"description\": \"Greek yogurt is a protein-rich dairy product that’s high in many nutrients like vitamin B12, calcium, and selenium. But, its nutritional value and health benefits can vary depending on the brand you choose.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        },\n        {\n            \"id\": \"04d44d29-d910-4acb-b76b-d3e489c0089c\",\n            \"name\": \"Classic Bongo\",\n            \"description\": \"Bongo or Soured milk denotes a range of food products produced by the acidification of milk. Acidification, which gives the milk a tart taste, is achieved either through bacterial fermentation or through the addition of an acid, such as lemon juice or vinegar. The acid causes milk to coagulate and thicken, inhibiting the growth of harmful bacteria and improving the product's shelf life.\",\n            \"price\": 20000,\n            \"quantity\": 5,\n            \"categoryId\": null\n        }\n    ]\n}"
+						},
+						{
+							"name": "All products with images",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/allProducts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3313"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cf1-6U81s4Qkjc5Jyy14A3NNTFzLPi8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 22 Oct 2024 06:34:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"products\": [\n        {\n            \"id\": \"dddf4016-f98f-409b-b7de-b368226a5851\",\n            \"name\": \" Dairy Pure Milk\",\n            \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n            \"price\": 18000,\n            \"quantity\": 5,\n            \"categoryId\": null,\n            \"images\": [\n                {\n                    \"id\": \"8234f899-8687-44c2-8f4d-79791b7127cd\",\n                    \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_CBNlIKpwMWVZbHVOukXptgYay_UAP5P_A&s\",\n                    \"productId\": \"dddf4016-f98f-409b-b7de-b368226a5851\"\n                }\n            ]\n        },\n        {\n            \"id\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\",\n            \"name\": \"Delightful Fruit Yogurt\",\n            \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null,\n            \"images\": [\n                {\n                    \"id\": \"87685fbd-b49d-41fa-9233-90ba4053d2bc\",\n                    \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRHoqzbtyzrU00JZzK9NjqLoV4jmxQihuNA&s\",\n                    \"productId\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\"\n                }\n            ]\n        },\n        {\n            \"id\": \"89c09d74-fca7-424a-8397-2faf4c4d192e\",\n            \"name\": \"Well Cooked Ghee\",\n            \"description\": \"Ghee is typically prepared by simmering butter, which is churned from cream, skimming any impurities from the surface, then pouring and retaining the clear liquid fat while discarding the solid residue that has settled to the bottom. Spices can be added for flavor. The texture, color, and taste of ghee depend on the quality of the butter, the milk used in the process, and the duration of boiling time.\",\n            \"price\": 50000,\n            \"quantity\": 1,\n            \"categoryId\": null,\n            \"images\": [\n                {\n                    \"id\": \"dfd715e7-82f0-4a10-a4af-daa487f8365a\",\n                    \"url\": \"https://i0.wp.com/lovelaughmirch.com/wp-content/uploads/2015/01/Making-Ghee-8-scaled.jpg?ssl=1\",\n                    \"productId\": \"89c09d74-fca7-424a-8397-2faf4c4d192e\"\n                }\n            ]\n        },\n        {\n            \"id\": \"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\",\n            \"name\": \"Greek Yogurt\",\n            \"description\": \"Greek yogurt is a protein-rich dairy product that’s high in many nutrients like vitamin B12, calcium, and selenium. But, its nutritional value and health benefits can vary depending on the brand you choose.\",\n            \"price\": 50000,\n            \"quantity\": 5,\n            \"categoryId\": null,\n            \"images\": [\n                {\n                    \"id\": \"70858a04-baca-4ddd-b83c-0d2d3c5cf966\",\n                    \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f8iBv3ZRbDdY10QbcjwV5dYHZ1Ge4hes3A&s\",\n                    \"productId\": \"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\"\n                }\n            ]\n        },\n        {\n            \"id\": \"04d44d29-d910-4acb-b76b-d3e489c0089c\",\n            \"name\": \"Classic Bongo\",\n            \"description\": \"Bongo or Soured milk denotes a range of food products produced by the acidification of milk. Acidification, which gives the milk a tart taste, is achieved either through bacterial fermentation or through the addition of an acid, such as lemon juice or vinegar. The acid causes milk to coagulate and thicken, inhibiting the growth of harmful bacteria and improving the product's shelf life.\",\n            \"price\": 20000,\n            \"quantity\": 5,\n            \"categoryId\": null,\n            \"images\": [\n                {\n                    \"id\": \"3a2dfe53-8405-40cf-b1e4-3d9640ae740b\",\n                    \"url\": \"https://www.allrecipes.com/thmb/z1XJPaswJaA-9r7yEWG_c0BBSZ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1243439079-2000-c746a3cc396947d2a39f96c14b499588.jpg\",\n                    \"productId\": \"04d44d29-d910-4acb-b76b-d3e489c0089c\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get a Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/products/product/ccf9579c-65ee-437b-b2f7-ba20ae7389eb"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/fec170d6-8639-48ab-9746-8789fe723e62"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "451"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c3-363FiMHzC6Uy5lkMBKwmLY5yvX0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 12:17:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product got successfully\",\n    \"product\": {\n        \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\n        \"name\": \" Dairy Pure Milk\",\n        \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n        \"price\": 18000,\n        \"quantity\": 5,\n        \"categoryId\": null\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/ccf9579c-65ee-437b-b2f7-ba20ae7389eb"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-PYiiyYgZKPPSVEXiyD9+kFic+a0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 12:19:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product got successfully\",\n    \"product\": {\n        \"id\": \"ccf9579c-65ee-437b-b2f7-ba20ae7389eb\",\n        \"name\": \"Delightful Fruit Yogurt\",\n        \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n        \"price\": 50000,\n        \"quantity\": 5,\n        \"categoryId\": null\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/product/32f57255-a528-4370-98e9-d3b954d6d731"
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-vAHlaOmiL00q0a407ccMJ438/hM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:12:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product id doesn't exist\"\n}"
+						},
+						{
+							"name": "Get a Single Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/product/32f57255-a528-4370-98e9-d3b954d6d731"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "410"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19a-WkTxJAiy85o/lwuKzd6+gv0wTDs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:14:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product got successfully\",\n    \"product\": {\n        \"id\": \"32f57255-a528-4370-98e9-d3b954d6d731\",\n        \"name\": \"Delightful Fruit Yogurt\",\n        \"description\": \"Yogurt  is a food produced by bacterial fermentation of milk.Fermentation of sugars in the milk by these bacteria produces lactic acid, which acts on milk protein to give yogurt its texture and characteristic tart flavor.\",\n        \"price\": 50000,\n        \"quantity\": 5,\n        \"categoryId\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\r\n            \"name\": \"Pure Dairy Milk\",\r\n            \"description\": \"Dairy milk is collected from cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\r\n            \"price\": 18000,\r\n            \"quantity\": 5,\r\n            \"categoryId\": null\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/products/fec170d6-8639-48ab-9746-8789fe723e62/updateProduct"
+					},
+					"response": [
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\r\n            \"name\": \"Pure Dairy Milk\",\r\n            \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\r\n            \"price\": 18000,\r\n            \"quantity\": 5,\r\n            \"categoryId\": null\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/fec170d6-8639-48ab-9746-8789fe723e62"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "441"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1b9-Ll+qxNCqNMGj+f+zJGtrgCyuNR0\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 12:36:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Updated\",\n    \"product\": {\n        \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\n        \"name\": \"Pure Dairy Milk\",\n        \"description\": \"Dairy milk is collected from farm animals mostly cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n        \"price\": 18000,\n        \"quantity\": 5,\n        \"categoryId\": null\n    }\n}"
+						},
+						{
+							"name": "Update Product",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n            \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\r\n            \"name\": \"Pure Dairy Milk\",\r\n            \"description\": \"Dairy milk is collected from cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\r\n            \"price\": 18000,\r\n            \"quantity\": 5,\r\n            \"categoryId\": null\r\n        }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/products/fec170d6-8639-48ab-9746-8789fe723e62/updateProduct"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "421"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a5-EQfm+85C8Ce7U3IYhr1nY+NqoBI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:18:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Updated\",\n    \"product\": {\n        \"id\": \"fec170d6-8639-48ab-9746-8789fe723e62\",\n        \"name\": \"Pure Dairy Milk\",\n        \"description\": \"Dairy milk is collected from cattle. Milk contains many nutrients, including calcium and protein, as well as lactose and saturated fat.Milk contains antibodies and immune-modulating components that strengthen the immune system against many diseases.\",\n        \"price\": 18000,\n        \"quantity\": 5,\n        \"categoryId\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/ccf9579c-65ee-437b-b2f7-ba20ae7389eb"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-VZJQd5pU/OPHKecGRNbtnBwj2ws\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 24 Sep 2024 12:57:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Successfully Deleted\"\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/products/9dcfbcde-1eb5-45ad-b8a3-3c55bc1fff99/deleteProduct"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-VZJQd5pU/OPHKecGRNbtnBwj2ws\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 25 Sep 2024 13:22:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Product Successfully Deleted\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This only specialzes the endpoints of the products model."
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Butter\",\r\n    \"description\":\"Butter is a dairy product made from the fat and protein components of churned cream. It is a semi-solid emulsion at room temperature, consisting of approximately 80% butterfat. It is used at room temperature as a spread, melted as a condiment, and used as a fat in baking, sauce-making, pan frying, and other cooking procedures.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/categories/create"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Butter\",\r\n    \"description\":\"Butter is a dairy product made from the fat and protein components of churned cream. It is a semi-solid emulsion at room temperature, consisting of approximately 80% butterfat. It is used at room temperature as a spread, melted as a condiment, and used as a fat in baking, sauce-making, pan frying, and other cooking procedures.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/categories/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "461"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1cd-SzO4o4kqn+lt4eoiS+u6s2g63i4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 09:15:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category created successfully\",\n    \"category\": {\n        \"id\": \"ec1ea90e-88ba-413d-aedc-341d78438e94\",\n        \"name\": \"Butter\",\n        \"description\": \"Butter is a dairy product made from the fat and protein components of churned cream. It is a semi-solid emulsion at room temperature, consisting of approximately 80% butterfat. It is used at room temperature as a spread, melted as a condiment, and used as a fat in baking, sauce-making, pan frying, and other cooking procedures.\"\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Milk\",\r\n    \"description\":\"Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/categories/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "336"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"150-uBdlUh8juSESLkm1mIPQnM/W4kI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 09:19:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category created successfully\",\n    \"category\": {\n        \"id\": \"2906592c-fbcb-4aeb-8089-60ef73135684\",\n        \"name\": \"Milk\",\n        \"description\": \"Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.\"\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Fermented milk\",\r\n    \"description\":\"Fermented milk products or fermented dairy products, also known as cultured dairy foods, cultured dairy products, or cultured milk products, are dairy foods that have been made by fermenting milk with lactic acid bacteria such as Lactobacillus, Lactococcus, and Leuconostoc.\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/categories/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "415"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19f-uGQCrPvVPL0kNPqKPyyYKHabQRw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 09:26:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category created successfully\",\n    \"category\": {\n        \"id\": \"e82ac90d-0e97-47cf-8039-68870a4e27e1\",\n        \"name\": \"Fermented milk\",\n        \"description\": \"Fermented milk products or fermented dairy products, also known as cultured dairy foods, cultured dairy products, or cultured milk products, are dairy foods that have been made by fermenting milk with lactic acid bacteria such as Lactobacillus, Lactococcus, and Leuconostoc.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Categories",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/categories/allCategories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1066"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42a-j+yOq1I8uGP9F07KTNsl9zs5CbU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 11:00:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categories\": [\n        {\n            \"id\": \"ec1ea90e-88ba-413d-aedc-341d78438e94\",\n            \"name\": \"Butter\",\n            \"description\": \"Butter is a dairy product made from the fat and protein components of churned cream. It is a semi-solid emulsion at room temperature, consisting of approximately 80% butterfat. It is used at room temperature as a spread, melted as a condiment, and used as a fat in baking, sauce-making, pan frying, and other cooking procedures.\"\n        },\n        {\n            \"id\": \"2906592c-fbcb-4aeb-8089-60ef73135684\",\n            \"name\": \"Milk\",\n            \"description\": \"Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.\"\n        },\n        {\n            \"id\": \"e82ac90d-0e97-47cf-8039-68870a4e27e1\",\n            \"name\": \"Fermented milk\",\n            \"description\": \"Fermented milk products or fermented dairy products, also known as cultured dairy foods, cultured dairy products, or cultured milk products, are dairy foods that have been made by fermenting milk with lactic acid bacteria such as Lactobacillus, Lactococcus, and Leuconostoc.\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Category",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get single category",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/categories/singleCategory/2906592c-fbcb-4aeb-8089-60ef73135684"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "332"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"14c-iQKfno3DJL7eGNePpw3c5Xt8F9I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 11:21:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category got successfully\",\n    \"category\": {\n        \"id\": \"2906592c-fbcb-4aeb-8089-60ef73135684\",\n        \"name\": \"Milk\",\n        \"description\": \"Milk is a white liquid food produced by the mammary glands of mammals. It is the primary source of nutrition for young mammals (including breastfed human infants) before they are able to digest solid food.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"name\": \"Cream\",\r\n        \"description\": \"the thick white or pale yellow fatty liquid which rises to the top when milk is left to stand and which can be eaten as an accompaniment to desserts or used as a cooking ingredient.\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/categories/9a00bbf6-6c08-49db-b0cb-c6c58607f25c/updateCategory"
+					},
+					"response": [
+						{
+							"name": "update category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Cream\",\r\n        \"description\": \"the thick white or pale yellow fatty liquid which rises to the top when milk is left to stand and which can be eaten as an accompaniment to desserts or used as a cooking ingredient.\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/categories/9a00bbf6-6c08-49db-b0cb-c6c58607f25c/updateCategory"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"138-pQmHv2MEsBlgxQduzy11RCAhQnc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 11:37:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category updated Sucessfully\",\n    \"category\": {\n        \"id\": \"9a00bbf6-6c08-49db-b0cb-c6c58607f25c\",\n        \"name\": \"Cream\",\n        \"description\": \"the thick white or pale yellow fatty liquid which rises to the top when milk is left to stand and which can be eaten as an accompaniment to desserts or used as a cooking ingredient.\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/categories/08fd1218-d7f6-428a-80d8-323083b1892e/deleteCategory"
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/categories/08fd1218-d7f6-428a-80d8-323083b1892e/deleteCategory"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-Q8g03KPmT/L4Do3bjeoFAaLLSqE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 12:01:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category Successfully Deleted\"\n}"
+						},
+						{
+							"name": "delete category",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/categories/08fd1218-d7f6-428a-80d8-323083b1892e/deleteCategory"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-Q8g03KPmT/L4Do3bjeoFAaLLSqE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 12:01:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Category Successfully Deleted\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This specializes the endpoints for the category model"
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"sdhshsfgjfgjgfnfgndd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/orders/create"
+					},
+					"response": [
+						{
+							"name": "create order",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\":\"sdhshsfgjfgjgfnfgndd\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/orders/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "78"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4e-WBdrHfGzbXG9OhvnNhfqZ6y0AMs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 27 Sep 2024 14:55:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Order created successfully\",\n    \"order\": {\n        \"id\": \"sdhshsfgjfgjgfnfgndd\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder specializes the endpoints for the order model"
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "Create Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"url\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_CBNlIKpwMWVZbHVOukXptgYay_UAP5P_A&s\",\r\n    \"productId\":\"dddf4016-f98f-409b-b7de-b368226a5851\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/images/create"
+					},
+					"response": [
+						{
+							"name": "image created successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"url\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_CBNlIKpwMWVZbHVOukXptgYay_UAP5P_A&s\",\r\n    \"productId\":\"dddf4016-f98f-409b-b7de-b368226a5851\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/images/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c3-f4ZMOGIFQ9GyNAwJCCoXgC6v2So\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 10:03:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image created successfully\",\n    \"image\": {\n        \"id\": \"8234f899-8687-44c2-8f4d-79791b7127cd\",\n        \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_CBNlIKpwMWVZbHVOukXptgYay_UAP5P_A&s\"\n    }\n}"
+						},
+						{
+							"name": "Create Image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"url\":\"https://ontbijtcentrale.be/wp-content/uploads/2018/02/yoghurt.jpg\",\r\n    \"productId\":\"71ca931b-bae4-47b2-a393-e50390bd8f63\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/images/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8-IDfARX9Y8B5XQFoc5yJvlR2SAL4\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 10:51:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image created successfully\",\n    \"image\": {\n        \"id\": \"87685fbd-b49d-41fa-9233-90ba4053d2bc\",\n        \"url\": \"https://ontbijtcentrale.be/wp-content/uploads/2018/02/yoghurt.jpg\"\n    }\n}"
+						},
+						{
+							"name": "Create Image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"url\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f8iBv3ZRbDdY10QbcjwV5dYHZ1Ge4hes3A&s\",\r\n    \"productId\":\"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/images/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "195"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c3-reZV5gmzzMM83Gx5zjNo7OxNw7k\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 10:54:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image created successfully\",\n    \"image\": {\n        \"id\": \"70858a04-baca-4ddd-b83c-0d2d3c5cf966\",\n        \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f8iBv3ZRbDdY10QbcjwV5dYHZ1Ge4hes3A&s\"\n    }\n}"
+						},
+						{
+							"name": "Create Image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"url\":\"https://www.allrecipes.com/thmb/z1XJPaswJaA-9r7yEWG_c0BBSZ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1243439079-2000-c746a3cc396947d2a39f96c14b499588.jpg\",\r\n    \"productId\":\"04d44d29-d910-4acb-b76b-d3e489c0089c\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/images/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "286"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11e-xxt/juBxpAD5HseGY4leg4WmaKs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 10:59:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image created successfully\",\n    \"image\": {\n        \"id\": \"3a2dfe53-8405-40cf-b1e4-3d9640ae740b\",\n        \"url\": \"https://www.allrecipes.com/thmb/z1XJPaswJaA-9r7yEWG_c0BBSZ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1243439079-2000-c746a3cc396947d2a39f96c14b499588.jpg\"\n    }\n}"
+						},
+						{
+							"name": "Create Image",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"url\":\"https://i0.wp.com/lovelaughmirch.com/wp-content/uploads/2015/01/Making-Ghee-8-scaled.jpg?ssl=1\",\r\n    \"productId\":\"89c09d74-fca7-424a-8397-2faf4c4d192e\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/images/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "197"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c5-IeVUZpJr2GSXcOFEkkpOhL23LxY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 11:01:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image created successfully\",\n    \"image\": {\n        \"id\": \"dfd715e7-82f0-4a10-a4af-daa487f8365a\",\n        \"url\": \"https://i0.wp.com/lovelaughmirch.com/wp-content/uploads/2015/01/Making-Ghee-8-scaled.jpg?ssl=1\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Images",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "get all images",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/images/allImages"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1068"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42c-s1c49bJHgZHXVqH/bLP56P8JL4s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 11:12:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"images\": [\n        {\n            \"id\": \"8234f899-8687-44c2-8f4d-79791b7127cd\",\n            \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz_CBNlIKpwMWVZbHVOukXptgYay_UAP5P_A&s\",\n            \"productId\": \"dddf4016-f98f-409b-b7de-b368226a5851\"\n        },\n        {\n            \"id\": \"87685fbd-b49d-41fa-9233-90ba4053d2bc\",\n            \"url\": \"https://ontbijtcentrale.be/wp-content/uploads/2018/02/yoghurt.jpg\",\n            \"productId\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\"\n        },\n        {\n            \"id\": \"70858a04-baca-4ddd-b83c-0d2d3c5cf966\",\n            \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4f8iBv3ZRbDdY10QbcjwV5dYHZ1Ge4hes3A&s\",\n            \"productId\": \"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\"\n        },\n        {\n            \"id\": \"3a2dfe53-8405-40cf-b1e4-3d9640ae740b\",\n            \"url\": \"https://www.allrecipes.com/thmb/z1XJPaswJaA-9r7yEWG_c0BBSZ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-1243439079-2000-c746a3cc396947d2a39f96c14b499588.jpg\",\n            \"productId\": \"04d44d29-d910-4acb-b76b-d3e489c0089c\"\n        },\n        {\n            \"id\": \"dfd715e7-82f0-4a10-a4af-daa487f8365a\",\n            \"url\": \"https://i0.wp.com/lovelaughmirch.com/wp-content/uploads/2015/01/Making-Ghee-8-scaled.jpg?ssl=1\",\n            \"productId\": \"89c09d74-fca7-424a-8397-2faf4c4d192e\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Image By Id",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Image got successfully",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/images/image/87685fbd-b49d-41fa-9233-90ba4053d2bc"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d7-XsAavt5QHBCkcuChcTozcmDVwSM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 11:24:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image got successfully\",\n    \"image\": {\n        \"id\": \"87685fbd-b49d-41fa-9233-90ba4053d2bc\",\n        \"url\": \"https://ontbijtcentrale.be/wp-content/uploads/2018/02/yoghurt.jpg\",\n        \"productId\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Image",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "update image by id",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"url\":\"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRHoqzbtyzrU00JZzK9NjqLoV4jmxQihuNA&s\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/images/87685fbd-b49d-41fa-9233-90ba4053d2bc/updateImage"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "233"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e9-63XEYzZNc53+oMlBJghyfhHAO6c\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 11:50:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image Updated\",\n    \"image\": {\n        \"id\": \"87685fbd-b49d-41fa-9233-90ba4053d2bc\",\n        \"url\": \"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHRHoqzbtyzrU00JZzK9NjqLoV4jmxQihuNA&s\",\n        \"productId\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Image",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3300/api/V1/images/b6ad216e-d629-43f5-b491-ac4f7584ee01/deleteImage"
+					},
+					"response": [
+						{
+							"name": "image deleted successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/images/b6ad216e-d629-43f5-b491-ac4f7584ee01/deleteImage"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-jk+8Z9UrGktBDDgfzZQpfK2ROzk\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 12:05:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Image successfully deleted\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This specializes the endpoints of the image model in the schema.prisma"
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Create Cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "cart created successfully",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/carts/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-3/9RbQJ/P0IrSW9XZU1dFHFlwik\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 14:44:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart created successfully\",\n    \"cart\": {\n        \"id\": \"22a8da2c-3d64-4be7-9fc0-eb0119df8f5f\"\n    }\n}"
+						},
+						{
+							"name": "cart created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/carts/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-TrCAsuTZp0JuR82Nz93auao1H3s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 14:46:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart created successfully\",\n    \"cart\": {\n        \"id\": \"538df300-5018-4062-994c-bb7782aacfaa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Carts",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "all carts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/carts/allCarts"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "149"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"95-J3rKZW8bFIHSeml5Yuw3Y6apZ1o\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 14:56:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"carts\": [\n        {\n            \"id\": \"22a8da2c-3d64-4be7-9fc0-eb0119df8f5f\"\n        },\n        {\n            \"id\": \"538df300-5018-4062-994c-bb7782aacfaa\"\n        },\n        {\n            \"id\": \"ded78e59-d472-446d-a749-be966f657aa8\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Single Cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "single cart",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/carts/cart/538df300-5018-4062-994c-bb7782aacfaa"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "88"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"58-NgupfMO0c1vjkqMHgpyFFaHqolU\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 15:07:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart got successfully\",\n    \"cart\": {\n        \"id\": \"538df300-5018-4062-994c-bb7782aacfaa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "updated cart",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/carts/538df300-5018-4062-994c-bb7782aacfaa/updateCart"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-s7gzosNnvsSUPaquJc5gSS15sYE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 15:20:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart updated successfully\",\n    \"cart\": {\n        \"id\": \"538df300-5018-4062-994c-bb7782aacfaa\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Cart",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/carts/4b5a723e-be05-4c59-8fb2-325fc2886bc7/deleteCart"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-KDtBm1zp6GDFcAB9DT7kfxt1Zhc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 15:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart deleted successfully\",\n    \"cart\": {\n        \"id\": \"4b5a723e-be05-4c59-8fb2-325fc2886bc7\"\n    }\n}"
+						},
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/carts/4b5a723e-be05-4c59-8fb2-325fc2886bc7/deleteCart"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-KDtBm1zp6GDFcAB9DT7kfxt1Zhc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 15:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart deleted successfully\",\n    \"cart\": {\n        \"id\": \"4b5a723e-be05-4c59-8fb2-325fc2886bc7\"\n    }\n}"
+						},
+						{
+							"name": "cart deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/carts/4b5a723e-be05-4c59-8fb2-325fc2886bc7/deleteCart"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5c-KDtBm1zp6GDFcAB9DT7kfxt1Zhc\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Oct 2024 15:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cart deleted successfully\",\n    \"cart\": {\n        \"id\": \"4b5a723e-be05-4c59-8fb2-325fc2886bc7\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This specializes on the endpoints for the cart model."
+		},
+		{
+			"name": "CartItem",
+			"item": [
+				{
+					"name": "getAllCartItems",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\": 5,\r\n    \"price\": 18000,\r\n    \"productId\":\"dddf4016-f98f-409b-b7de-b368226a5851\",\r\n    \"cartId\":\"22a8da2c-3d64-4be7-9fc0-eb0119df8f5f\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:3300/api/V1/cartItems/allCartItems"
+					},
+					"response": [
+						{
+							"name": "cartItem created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 5,\r\n    \"price\": 18000,\r\n    \"productId\":\"dddf4016-f98f-409b-b7de-b368226a5851\",\r\n    \"cartId\":\"22a8da2c-3d64-4be7-9fc0-eb0119df8f5f\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/cartItems/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-NqZcHNtQIK22GMBs54GdBZszDRk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Oct 2024 08:23:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"CartItem created Successfully\",\n    \"cartItem\": {\n        \"id\": \"bc37ca74-3cac-465c-90b6-ba95017bf9b8\",\n        \"quantity\": 5,\n        \"price\": 18000\n    }\n}"
+						},
+						{
+							"name": "Create CartItem",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 5,\r\n    \"price\": 50000,\r\n    \"productId\":\"71ca931b-bae4-47b2-a393-e50390bd8f63\",\r\n    \"cartId\":\"538df300-5018-4062-994c-bb7782aacfaa\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/cartItems/create"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "127"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"7f-Ezw1HEUB1uO6S3Oj+dLliuOTNus\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Oct 2024 08:40:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"CartItem created Successfully\",\n    \"cartItem\": {\n        \"id\": \"cf1d0b90-3f34-492a-8a88-b5a57d68bf5c\",\n        \"quantity\": 5,\n        \"price\": 50000\n    }\n}"
+						},
+						{
+							"name": "All CartItems",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 5,\r\n    \"price\": 18000,\r\n    \"productId\":\"dddf4016-f98f-409b-b7de-b368226a5851\",\r\n    \"cartId\":\"22a8da2c-3d64-4be7-9fc0-eb0119df8f5f\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/cartItems/allCartItems"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "359"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"167-74Jr6n8r0yn7HEJHPrQc7ELUiOQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 21 Oct 2024 13:06:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"cartItems\": [\n        {\n            \"id\": \"bc37ca74-3cac-465c-90b6-ba95017bf9b8\",\n            \"quantity\": 5,\n            \"price\": 18000,\n            \"productId\": \"dddf4016-f98f-409b-b7de-b368226a5851\",\n            \"cartId\": \"22a8da2c-3d64-4be7-9fc0-eb0119df8f5f\"\n        },\n        {\n            \"id\": \"cf1d0b90-3f34-492a-8a88-b5a57d68bf5c\",\n            \"quantity\": 5,\n            \"price\": 50000,\n            \"productId\": \"71ca931b-bae4-47b2-a393-e50390bd8f63\",\n            \"cartId\": \"538df300-5018-4062-994c-bb7782aacfaa\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete CartItem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "remove cartItem",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": "http://localhost:3300/api/V1/cartItems/3d5b39bb-c264-4eb3-a800-cc76972c2612/deleteCartItem"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "43"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2b-NmF0Bpj7wHtWL/mzExVwEZJAEFM\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Oct 2024 10:56:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"CartItem deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This specializes on the endpoints of the cartItem model."
+		},
+		{
+			"name": "OrderItem",
+			"item": [
+				{
+					"name": "Create OrderItem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "orderItem created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"quantity\": 5,\r\n    \"price\": 50000,\r\n    \"productId\":\"8c9c0d85-a392-4ec6-a399-aae116cdc6ac\",\r\n    \"orderId\":\"alslfioekenhtrtigkrj\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/orderItems/add"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "129"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"81-z+d+egJtvwBuGNt7kaLsmyC4FnI\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Oct 2024 14:10:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OrderItem created successfully\",\n    \"orderItem\": {\n        \"id\": \"87ae680f-5ccd-4616-a40b-9ad745a3211e\",\n        \"quantity\": 5,\n        \"price\": 50000\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete OrderItem",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "orderItem deleted",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "http://localhost:3300/api/V1/orderItems/303d0d81-39b1-4c88-8300-4f8cd5e07224/deleteOrderItem"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-0I/KPSyicK7WHKiArAwhxFcfLqs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 04 Oct 2024 14:26:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"OrderItem deleted successfully\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This specializes on the endpoints of the orderItem model ."
+		}
+	]
+}
